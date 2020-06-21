@@ -1,21 +1,26 @@
 const fs = require('fs');
+debugger
 const chalk = require('chalk');
-
+debugger
 const constants = {
     notesFilePath: 'notes.json'
 }
+debugger
 
 // const getNotes = (filePath, options, callback) => {
 //     fs.readFile(filePath, options, callback )
 // }
 
 const addNotes = (title, body) => {
+    debugger
     const notes = loadNotes();
     const duplicateNote = notes.find( (note) => {
         return note.title === title;
     })
 
-    if(duplicateNote){
+debugger
+    console.log(duplicateNote)
+    if(!duplicateNote){
         notes.push({
             title: title,
             body: body
@@ -26,6 +31,8 @@ const addNotes = (title, body) => {
         console.log(chalk.red.bgWhite("Note with same \"title\" already exist"))
     }
 }
+
+debugger
 
 const removeNotes = (title) => {
     const notes = loadNotes();
@@ -39,6 +46,7 @@ const removeNotes = (title) => {
             return true;
         }
     })
+    debugger
 
     if(notes.length > updatedNotes.length){
         console.log(chalk.inverse.green(' Note Removed '));
