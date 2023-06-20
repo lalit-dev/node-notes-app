@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "chalk": "^4.1.0",
-    "googleapis": "^39.2.0",
+    "googleapis": "^40.0.0",
     "nodemon": "^2.0.4",
     "underscore": "^1.10.2",
     "yargs": "^15.3.1"
